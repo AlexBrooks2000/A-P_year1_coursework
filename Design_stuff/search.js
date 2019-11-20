@@ -1,8 +1,17 @@
+class Doggo {
+  constructor(image, name, breed, sex) {
+    this.image = image;
+    this.name = name;
+    this.breed = breed;
+    this.sex = sex;
+  }
+}
 
-const dogs = [{image: "images/pug.jpg", name: "mike", breed: "pug", sex: "male"},
+let dogs = [{image: "images/pug.jpg", name: "mike", breed: "pug", sex: "male"},
 {image: "images/lab.jpg", name: "Susan", breed: "labrador", sex: "female"},
 {image: "images/corgi.jpg", name: "ralph", breed: "corgi", sex: "male"},
-{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"}];
+{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"},
+{image: "images/judith.jpg", name: "judith", breed: "Not a fuckin' dog", sex: "female"}];
 
 function addDogProfile(dogs) {
   for (const dog of dogs) {
@@ -37,6 +46,19 @@ function addDogProfile(dogs) {
     document.getElementById("mainView").appendChild(newDiv);
   }
 }
+
+function createNewDog() {
+  let newDogImage = document.getElementById('inputImage').value;
+  let newDogName = document.getElementById('inputName').value;
+  let newDogBreed = document.getElementById('inputBreed').value;
+  let newDogSex = document.getElementById('inputSex').value;
+
+  let newDoggo = new Doggo(newDogImage, newDogName, newDogBreed, newDogSex);
+  dogs.push(newDoggo);
+  //window.onload();
+  console.log("button pressed")
+}
 window.onload = function() {
-  addDogProfile(dogs);
+addDogProfile(dogs);
+
 }
