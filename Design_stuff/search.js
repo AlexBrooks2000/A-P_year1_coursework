@@ -10,8 +10,7 @@ class Doggo {
 let dogs = [{image: "images/pug.jpg", name: "mike", breed: "pug", sex: "male"},
 {image: "images/lab.jpg", name: "Susan", breed: "labrador", sex: "female"},
 {image: "images/corgi.jpg", name: "ralph", breed: "corgi", sex: "male"},
-{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"},
-{image: "images/judith.jpg", name: "judith", breed: "Not a fuckin' dog", sex: "female"}];
+{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"}];
 
 function addDogProfile(dogs) {
   for (const dog of dogs) {

@@ -1,0 +1,4 @@
+[{image: "images/pug.jpg", name: "mike", breed: "pug", sex: "male"},
+{image: "images/lab.jpg", name: "Susan", breed: "labrador", sex: "female"},
+{image: "images/corgi.jpg", name: "ralph", breed: "corgi", sex: "male"},
+{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"}]
