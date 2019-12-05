@@ -1,13 +1,42 @@
 body {
   background-color: #e9ebee;
   font-family: sans-serif;
+  margin: 0;
 }
 
-header {
-  background-color: blue;
-  padding-bottom: 10em;
-  width: 100%;
+.header {
+  padding: 1em;
+  background-color: royalblue;
+  color: white;
 }
+
+#logo {
+  width: 10%;
+}
+
+#brandName {
+  width: 20%;
+}
+
+#signIn {
+  float: right;
+}
+
+.signInButton {
+  background-color: royalblue;
+  border-color: black;
+  color: white;
+}
+
+.signInButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.headerText {
+  display: inline;
+}
+
 .column {
   float: left;
   padding: 10px;
@@ -17,8 +46,8 @@ header {
   width: 20%;
 }
 
-.column.middle {
-  width: 60%;
+.column.main {
+  width: 70%;
 }
 
 .row:after {
@@ -98,4 +127,15 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+p {
+  text-align: justify;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+li {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
