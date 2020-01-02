@@ -12,9 +12,36 @@ let dogs = [{image: "images/pug.jpg", name: "mike", breed: "pug", sex: "male"},
 {image: "images/corgi.jpg", name: "ralph", breed: "corgi", sex: "male"},
 {image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"}];
 
+function loggedIn() {
+  const isLoggedIn = true;
+  const user = "Joe Bloggs"
+
+  let newDiv = document.createElement("div");
+  newDiv.setAttribute("id", "signIn");
+
+  if (isLoggedIn === true) {
+    let logInMessage = document.createElement("p");
+    logInMessage.textContent = "Welcome " + user;
+    let signOutButton = document.createElement("button");
+    signOutButton.textContent = "log out";
+    logInMessage.setAttribute("class", "headerText");
+    signOutButton.setAttribute("class", "headerText signInButton");
+    newDiv.appendChild(logInMessage);
+    newDiv.appendChild(signOutButton);
+  } else {
+    let signInButton = document.createElement("button");
+    signInButton.textContent = "sign in";
+    signInButton.setAttribute("class", "signInButton");
+    newDiv.appendChild(signInButton);
+  }
+
+  document.querySelector("#header").appendChild(newDiv);
+}
+
 function addDogProfile(dogs) {
   for (const dog of dogs) {
     let newDiv = document.createElement("div"); //creates div
+    let secondDiv = document.createElement("div");
 
     //adds image to the div
     let newImg = document.createElement("IMG");
@@ -27,22 +54,23 @@ function addDogProfile(dogs) {
     //add dog name to the div
     let dogName = document.createElement("p");
     dogName.textContent = "Name: " + dog.name;
-    newDiv.appendChild(dogName);
+    secondDiv.appendChild(dogName);
 
     //add dog breed to div
     let dogBreed = document.createElement("p");
     dogBreed.textContent = "Breed: " + dog.breed;
-    newDiv.appendChild(dogBreed);
+    secondDiv.appendChild(dogBreed);
 
     //add dog sex to div
     let dogSex = document.createElement("p");
     dogSex.textContent = "sex: " + dog.sex;
-    newDiv.appendChild(dogSex);
+    secondDiv.appendChild(dogSex);
 
     //Adds div to the main body
-    //document.body.appendChild(newDiv);
+    secondDiv.setAttribute("class", "secondDiv")
+    newDiv.appendChild(secondDiv);
     newDiv.setAttribute("class", "profileView")
-    document.getElementById("mainView").appendChild(newDiv);
+    document.querySelector("#mainView").appendChild(newDiv);
   }
 }
 
@@ -58,6 +86,7 @@ function createNewDog() {
   console.log("button pressed")
 }
 window.onload = function() {
-addDogProfile(dogs);
+  loggedIn();
+  addDogProfile(dogs);
 
 }
