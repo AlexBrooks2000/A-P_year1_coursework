@@ -61,6 +61,7 @@ body {
     width: 100%;
   }
 }
+
 .displayViews {
   background-color: white;
   margin-top: 1em;
@@ -98,10 +99,6 @@ body {
   margin-right: 0.1em;
 }
 
-.dropBox {
-  margin-left: : 1em;
-}
-
 #chatButton {
   background-color: #e9ebee;
   border: none;
@@ -115,31 +112,4 @@ body {
 
 .navButtons:hover {
   background-color: #e9ebee;
-}
-
-#kennelClub {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#pedigree {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-p {
-  text-align: justify;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
-li {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
 }

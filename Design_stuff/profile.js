@@ -1,24 +1,26 @@
-function createProfileTop(dogs) {
+
+
+function createProfileTop() {
   let newDiv = document.createElement("div");
   let secondDiv = document.createElement("div");
   let newImg = document.createElement("IMG");
 
-  newImg.setAttribute("src", dogs[0].image);
+  newImg.setAttribute("src", profileDog.image);
   newImg.setAttribute("class", "profilePic");
   newDiv.appendChild(newImg);
 
   let name = document.createElement("h2");
-  name.textContent = dogs[0].name;
+  name.textContent = profileDog.name;
   name.setAttribute("class", "dogName");
   secondDiv.appendChild(name);
 
   let breed = document.createElement("p");
-  breed.textContent = dogs[0].breed;
+  breed.textContent = profileDog.breed;
   breed.setAttribute("class", "dogBreed");
   secondDiv.appendChild(breed);
 
   let sex = document.createElement("p");
-  sex.textContent = dogs[0].sex;
+  sex.textContent = profileDog.sex;
   sex.setAttribute("class", "dogSex");
   secondDiv.appendChild(sex);
 
@@ -67,7 +69,7 @@ function addFeatures(dogs) {
   featuresTitle.setAttribute("class", "titles");
   newDiv.appendChild(featuresTitle);
   let newNav = document.createElement("nav");
-  for (const feature of dogs[0].features) {
+  for (const feature of profileDog.features) {
     let newFeature = document.createElement("li");
     newFeature.textContent = feature;
     newNav.appendChild(newFeature);
@@ -81,11 +83,11 @@ function addDescription(dogs) {
   let newDiv = document.createElement("div");
   newDiv.setAttribute("class", "middleDivs");
   let aboutDog = document.createElement("h3");
-  aboutDog.textContent = "About " + dogs[0].name;
+  aboutDog.textContent = "About " + profileDog.name;
   aboutDog.setAttribute("class", "titles");
   newDiv.appendChild(aboutDog);
   let newDes = document.createElement("p");
-  newDes.textContent = dogs[0].description;
+  newDes.textContent = profileDog.description;
   newDiv.appendChild(newDes);
   document.querySelector("#mainView").appendChild(newDiv);
 }
@@ -100,7 +102,7 @@ function addKennelClub(dogs) {
 
   let kennelImg = document.createElement("IMG");
   kennelImg.setAttribute("id", "kennelClub");
-  if (dogs[0].kennelClub === true) {
+  if (profileDog.kennelClub === true) {
     kennelImg.setAttribute("src", "images/kennelClub.png");
   } else {
     kennelImg.setAttribute("src", "images/RedCross.png");
@@ -119,7 +121,7 @@ function addPedigree(dogs) {
 
   let pedigreeImg = document.createElement("IMG");
   pedigreeImg.setAttribute("id", "pedigree");
-  if (dogs[0].pedigree === true) {
+  if (profileDog.pedigree === true) {
     pedigreeImg.setAttribute("src", "images/pedigree.png");
   } else {
     pedigreeImg.setAttribute("src", "images/RedCross.png");
@@ -131,7 +133,11 @@ function addPedigree(dogs) {
 let dogs = [{image: "images/pug.jpg", name: "Mike", breed: "pug", sex: "male", features: ["short hair", "excitable", "non-aggressive", "Pedegree"], description: "The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.", kennelClub: true, pedigree: true},
 {image: "images/lab.jpg", name: "Susan", breed: "labrador", sex: "female"},
 {image: "images/corgi.jpg", name: "ralph", breed: "corgi", sex: "male"},
-{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"}];
+{image: "images/yoda.jpg", name: "Baby Yoda", breed: "unknown", sex: "unknown"},
+{image: "images/frog.jpg", name: "Liz", breed: "Sexy frog", sex: "female", features: ["smooth", "ribbity", "bouncy", "confused", "definily not a dog"], description: "This isn't a frog dating website is it?", kennelClub: false, pedigree: false}];
+
+const profileDog = dogs[0];
+
 
 window.onload = function() {
   loggedIn();

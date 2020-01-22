@@ -25,10 +25,18 @@ function loggedIn() {
   document.querySelector("#header").appendChild(newDiv);
 }
 
-function listDogs() {
-  
-}
+function listDogs(dog) {
+  let newDiv = document.createElement("div");
+  newDiv.setAttribute("class", "dogBox");
 
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", dog.img);
+  newImg.setAttribute("class", "dogImage");
+  newDiv.appendChild(newImg);
+
+  document.querySelector("#mainView").appendChild(newDiv);
+
+}
  let dog = {image: "images/pug.jpg",
  name: "Mike",
  breed: "pug",
@@ -37,5 +45,5 @@ function listDogs() {
 
 window.onload = function() {
   loggedIn();
-  console.log(dog.name);
+  listDogs(dog);
 }

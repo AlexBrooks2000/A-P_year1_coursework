@@ -1,49 +1,4 @@
-/* .profileView {
-  background-color: grey;
-  height: 15em;
-  width: 80%;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
 
-.dogImage {
-  margin-top: 1em;
-}
-
-#header {
-  display: inline;
-  color: white;
-  background-color: blue;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  left: 0;
-}
-
-#headerTxt {
-  display: inline;
-}
-
-#logoImg {
-  width: 10%;
-  height: auto;
-}
-
-li {
-  display: inline;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover{
-  text-decoration: underline;
-} */
 body {
   background-color: #e9ebee;
   font-family: sans-serif;
@@ -145,7 +100,7 @@ body {
 }
 
 .profileView {
-  width: 95%;
+  width: 100%;
   background-color: white;
   margin-bottom: 1em;
   padding-right: 0;
@@ -153,7 +108,9 @@ body {
 }
 
 .dogImage {
-  margin-top: 1em;
+  margin: 1em;
+
+
 }
 
 .secondDiv {
