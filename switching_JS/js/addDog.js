@@ -24,7 +24,8 @@ function addDog() {
       newInput.setAttribute("id", inputID);
     document.querySelector("#mainView").appendChild(newInput);
     } else if (isTF = true){
-      const newInput =document.createElement("select");
+      const newInput = document.createElement("select");
+      newInput.setAttribute("id", inputID);
 
       const yesInput = document.createElement("option");
       yesInput.setAttribute("value", true);
@@ -68,6 +69,7 @@ function createDogobject() {
   const sex = document.querySelector("#dogSex").value;
   const size = document.querySelector("#dogSize").value;
   const kennelClub = document.querySelector("#dogKennel").value;
+  console.log(kennelClub);
   const pedigree = document.querySelector("#dogPedigree").value;
 
   const newDog = new Dog(profile, name, breed, sex, size, kennelClub, pedigree);
