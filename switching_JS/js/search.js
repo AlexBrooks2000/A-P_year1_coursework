@@ -39,7 +39,7 @@ function addDogProfile(dogs) {
           let secondDiv = document.createElement("div");
 
           //adds image to the d iv
-          let newImg = document.createElement("IMG");
+          const newImg = document.createElement("IMG");
           newImg.setAttribute("src", dog.image);
           newImg.setAttribute("width", "100em");
           newImg.setAttribute("height", "140em");
@@ -47,24 +47,29 @@ function addDogProfile(dogs) {
           newDiv.appendChild(newImg);
 
           //add dog name to the div
-          let dogName = document.createElement("p");
+          const dogName = document.createElement("p");
           dogName.textContent = "Name: " + dog.name;
           secondDiv.appendChild(dogName);
 
           //add dog breed to div
-          let dogBreed = document.createElement("p");
+          const dogBreed = document.createElement("p");
           dogBreed.textContent = "Breed: " + dog.breed;
           secondDiv.appendChild(dogBreed);
 
           //add dog sex to div
-          let dogSex = document.createElement("p");
+          const dogSex = document.createElement("p");
           dogSex.textContent = "sex: " + dog.sex;
           secondDiv.appendChild(dogSex);
 
+          //add view profile button
+          const butPro = document.createElement("button");
+          butPro.textContent = "view profile";
+          secondDiv.appendChild(butPro);
+
           //add message button
-          let but = document.createElement("button");
-          but.textContent = "message owner";
-          secondDiv.appendChild(but);
+          const butMsg = document.createElement("button");
+          butMsg.textContent = "message owner";
+          secondDiv.appendChild(butMsg);
 
           //Adds div to the main body
           secondDiv.setAttribute("class", "secondDiv")

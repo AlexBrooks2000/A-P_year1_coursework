@@ -12,6 +12,15 @@ let breedFilter = "any";
 let sexFilter = "any";
 let sizeFilter = "any";
 
+let profileName = "";
+let profileImage = "";
+let profileBreed = "";
+let profileSex = "";
+let profileFeatures = [];
+let profileDescription = "";
+let profileKennelClub = false;
+let profilePedegree = false;
+
 function loggedIn() {
   const isLoggedIn = true;
   const user = "Joe Bloggs"
@@ -45,6 +54,10 @@ function loadNewJS() {
 
   searchDogs.addEventListener("click", function() {
     loadScript("js/search.js");
+  });
+
+  myDogs.addEventListener("click", function() {
+    loadScript("js/myDogs.js");
   });
 }
 
